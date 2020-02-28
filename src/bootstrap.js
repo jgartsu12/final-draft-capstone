@@ -6,7 +6,6 @@ import { Router, Switch, Route } from "react-router-dom";
 
 const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
-import App from "./components/app";
 import reducers from "./store/reducers";
 import "./style/main.scss";
 import history from './history';
@@ -16,7 +15,7 @@ function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router history={history}>
-        <App>
+        <Layout>
           <Switch>
             <Route path='/' exact component={SignIn}/>
             {/* <Route path='/signin' exact component={Signin}/>
@@ -30,11 +29,10 @@ function main() {
             <Route path='/information/email' exact component={Email}/>
             <Route path='/information/payment' exact component={Payment}/> */}
           </Switch>
-        </App>
+        </Layout>
       </Router>
-    </Provider>,
-    document.querySelector(".app-wrapper")
-  );
+    </Provider>
+    , document.querySelector(".app-wrapper"));
 }
 
 document.addEventListener("DOMContentLoaded", main);
