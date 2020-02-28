@@ -7,11 +7,7 @@ import {
   faPhone,
   faEnvelope,
   faMapMarkedAlt,
-  faLock,
-  fasFacebook,
-  fasTwitter,
-  fasInstagram
-
+  faLock
 } from "@fortawesome/free-solid-svg-icons";
 import {library } from "@fortawesome/fontawesome-svg-core";
 
@@ -25,10 +21,7 @@ const Icons = () => {
         faPhone,
         faEnvelope,
         faMapMarkedAlt,
-        faLock,
-        fasFacebook,
-        fasTwitter,
-        fasInstagram
+        faLock
   );
 };
 
