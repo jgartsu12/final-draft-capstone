@@ -2,11 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import history from '../../history';
+import ChefsTableBannerImage from '../../../static/assets/images/chefs_home_page_banner.png';
 
 class Header extends Component {
     render() {
         return (
             <div className='header'>
+                <img className='header-banner__img'
+                    style= {{
+                            background: "url(" + ChefsTableBannerImage + ") no-repeat",
+                            backgroundSize: "cover",
+                            backgroundPosition: 'center'
+                        }}    
+                    />
                 <div className='header__links'>
                 {
                     this.props.headerLinks.map((link, index) => {
